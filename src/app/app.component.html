@@ -7,13 +7,17 @@
         </div>
         <ul class="menu">
             <li><a routerLink="/Inicio">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a routerLink="/Menu">Productos</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
-        <div class="menu-icon">
+        <div class="menu-icon" (click)="toggleMenu()">
             <img src="assets/menu-white.png" alt="Menu Icon">
         </div>
     </nav>
 </div>
+
+
+<app-menu [isOpen]="isMenuOpen" (menuToggled)="toggleMenu()"></app-menu>
+
 <router-outlet></router-outlet>

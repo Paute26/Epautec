@@ -1,0 +1,72 @@
+.menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transform: translateX(300px);
+    transition: transform 0.3s ease;
+}
+
+.menu-list {
+    
+    list-style-type: none;
+    padding: 0;
+    margin: 50px 0; /* Aumenta el margen superior para centrar los elementos */
+    text-align: center; /* Centra horizontalmente los elementos de la lista */
+}
+
+.menu-list li {
+    padding: 10px;
+    margin-bottom: 20px; /* Agrega un margen inferior de 10px entre cada botón */
+
+}
+
+.menu-list li a {
+    color: #424242;
+    text-decoration: none;
+    display: block; /* Hace que los enlaces ocupen todo el ancho disponible */
+    padding: 10px 20px; /* Ajusta el espaciado interno del botón según sea necesario */
+    background-color: #fff; /* Agrega un fondo blanco a los botones */
+    transition: background-color 0.3s ease; /* Agrega una transición suave al color de fondo */
+
+}
+
+.menu-list li a:hover {
+    background-color: #3eccff; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+.menu-list li:first-child {
+    margin-top: 60px; /* Ajusta el margen superior del primer botón según sea necesario */
+}
+
+
+.menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.menu-container.open {
+    transform: translateX(0);
+}
+
+/*LOGO*/
+.menu-logo {
+    text-align: center; /* Centra horizontalmente el contenido del contenedor */
+    margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.menu-logo img {
+    width: 50px; /* Tamaño deseado para el icono */
+    height: 50px; /* Tamaño deseado para el icono */
+    margin-top: 40px;
+}
+
+

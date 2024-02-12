@@ -1,1 +1,12 @@
-<p>menu works!</p>
+<div class="menu-container" [ngClass]="{'open': isOpen}">
+    <div class="menu-toggle" (click)="toggleMenu()"></div>
+    <div class="menu-logo">
+        <img src="assets/icono.png" alt="Icono">
+
+    </div>
+    <ul class="menu-list">
+        <li><a href="#">Carrito</a></li>
+        <li><a href="#">Usuario</a></li>
+        <li><a href="#">Registrarse</a></li>
+    </ul>
+</div>
