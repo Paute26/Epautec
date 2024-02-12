@@ -1,11 +1,74 @@
 body {
-    margin: 0; /* Asegura que no hay márgenes por defecto en el cuerpo */
-    padding: 0;
+    
+    margin: 0; /* Elimina los márgenes predeterminados */
 }
-.barra{
-    background-color: #18181A;
-    width: 100%;
-    height: 100px;
-    margin: 0;
-    padding: 0;
+
+.app-component {
+    position: relative; /* Establece la posición relativa para el contenedor */
+    padding-top: 15px;
 }
+
+.imagen {  
+    width: 100%; /* La imagen se ajustará al ancho del contenedor */
+    height: auto;
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/*TEXTO*/
+.texto-sobre-imagen {
+    position: absolute; /* Establece la posición absoluta para el texto */
+    top: 50%; /* Posiciona el texto en el 50% del contenedor */
+    left: 50%; /* Posiciona el texto en el 50% del contenedor */
+    transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
+    color: white; /* Color del texto */
+}
+p{
+    font-size: 64px;
+    position: relative;
+    top: -40px; /* Mueve el h1 hacia abajo 20 píxeles desde su posición original */
+    left: -10px; /* Mueve el h1 hacia la derecha 50 píxeles desde su posición original */
+    white-space: nowrap; /* Evita que el texto haga saltos de línea automáticamente */
+
+}
+p.line{
+    top: -80px; 
+    left: 170px;
+}
+.contenedor {
+    position: relative; /* Establece la posición relativa */
+    transform: translateX(550px);
+    top: -120px; 
+    margin-top: 150px; /* Ajusta el margen superior del contenedor */
+    max-width: 50%;
+}
+
+.contenedor p {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 30px; /* Ajusta el margen superior de cada párrafo */
+}
+
+/*BOTONES*/
+.boton {
+    background-color: #f0f0f0; /* Color de fondo */
+    color: #333; /* Color del texto */
+    border: 1px solid #ccc; /* Borde del botón */
+    padding: 10px 20px; /* Espacio interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 4px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    display: inline-block; /* Permite aplicar padding y border */
+    position: relative;
+    top: -150px; 
+    left: 850px; 
+}
+
+.boton:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar sobre el botón */
+    
+}
+
+
+
