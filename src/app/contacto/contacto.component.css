@@ -1,0 +1,53 @@
+.contacto{
+    background-color: #19191a;
+    margin: 1% 10%;
+    padding: 20px
+    ;
+}
+
+.info{
+    color:aliceblue ;
+    background-color:#0d56df;
+    text-align: center;
+}
+.imagen {
+    text-align: center; /* Alinea horizontalmente el contenido */
+  }
+  
+  .imagen img {
+    display: block; /* Convierte la imagen en un elemento de bloque */
+    margin: auto; /* Centra la imagen horizontalmente */
+  }
+  
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3eccff;
+    color: #19191a;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+  }
+  
+  .container h2 {
+    text-align: center;
+  }
+  
+  .container p {
+    margin-bottom: 20px;
+  }
+  
+  .container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .container ul li {
+    margin-bottom: 10px;
+  }
+  
+  .container ul li strong {
+    font-weight: bold;
+    margin-right: 5px;
+}
+  

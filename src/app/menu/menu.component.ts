@@ -15,6 +15,10 @@ export class MenuComponent {
     this.isOpen = !this.isOpen;
     this.menuToggled.emit();
   }
+  enviarReferencia() {
+    this.isOpen = false;
+    this.menuToggled.emit();
+  }
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {

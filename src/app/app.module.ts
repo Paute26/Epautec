@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './Inicio/inicio.component';
 import { MenuComponent } from './menu/menu.component';
 import { AccesoComponent } from './acceso/acceso.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     MenuComponent,
-    AccesoComponent
+    AccesoComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
