@@ -1,0 +1,72 @@
+/* CONTENEDOR GLOBAL */
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Utiliza el 100% del alto de la ventana */
+    background-color: rgb(172, 172, 172);
+}
+
+.container h2 {
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
+.container button {
+    background-color:#f0f0f0; /* Color de fondo */
+    color: black; /* Color del texto */
+    border: 1px solid #ccc; /* Borde del botón */
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    display: block; /* Cambia a bloque para ocupar el ancho completo */
+    margin: 20px auto; /* Establece los márgenes superior e inferior a 20px y los laterales a auto */
+}
+
+.container button:hover {
+    background-color: #2ECC71; /* Cambia el color de fondo al pasar el ratón por encima */
+    color: white;
+    border: 1px solid #000000; /* Borde del botón */
+}
+
+
+
+/* FORMULARIO DE INICIO DE SESIÓN */
+.login {
+    color: white;
+    width: 50%; /* Cada sección ocupa la mitad del ancho */
+    padding: 40px 20px; /* Añade espacio alrededor del contenido */
+    margin-right: 20px; /* Espacio entre las dos partes */
+    background-color: #020202;
+    margin:  5%; 
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    display: block; /* Hace que los elementos input sean bloques */
+    margin-bottom: 10px; /* Agrega espacio entre cada cuadro de texto */
+}
+
+/* FORMULARIO DE REGISTRO */
+.registro {
+    color: white;
+    width: 50%; /* Cada sección ocupa la mitad del ancho */
+    padding: 20px; /* Añade espacio alrededor del contenido */
+    margin-left: 20px; /* Espacio entre las dos partes */
+    background-color: #424242;
+    margin: 5%;
+}
+
+.registro input[type="text"],
+.registro input[type="password"] {
+    display: block; /* Hace que los elementos input sean bloques */
+    margin-bottom: 10px; /* Agrega espacio entre cada cuadro de texto */
+}
+
+.login,
+.registro {
+    display: flex; /* Usa un contenedor flexible */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
