@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isMenuOpen: boolean = false;
-
+  title="Epautec";
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }

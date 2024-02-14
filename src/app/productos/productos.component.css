@@ -1,0 +1,33 @@
+/* Estilos para la página de productos */
+h2 {
+    color: white;
+    text-align: center;
+    padding-top: 2%; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 2%;
+
+}
+
+li {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 1px solid white; /* Grosor, estilo y color de la línea */
+    margin: 20px 0; /* Margen superior e inferior para separar los elementos */
+}
+.contenedor{
+    background-color: black;
+    color: white;
+}

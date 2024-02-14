@@ -1,75 +1,53 @@
-body {
-    
-    margin: 0; /* Elimina los márgenes predeterminados */
-}
-
-.app-component {
-    position: relative; /* Establece la posición relativa para el contenedor */
-    padding-top: 15px;
-    overflow: auto;
-}
-
-.imagen {  
-    width: 100%; /* La imagen se ajustará al ancho del contenedor */
-    height: auto;
-    overflow: hidden; /* Oculta cualquier contenido que se desborde */
-}
-
-/*TEXTO*/
-.texto-sobre-imagen {
-    position: absolute; /* Establece la posición absoluta para el texto */
-    top: 50%; /* Posiciona el texto en el 50% del contenedor */
-    left: 50%; /* Posiciona el texto en el 50% del contenedor */
-    transform: translate(-50%, -50%); /* Centra el texto horizontal y verticalmente */
-    color: white; /* Color del texto */
-}
-p{
-    font-size: 64px;
-    position: relative;
-    top: -40px; /* Mueve el h1 hacia abajo 20 píxeles desde su posición original */
-    left: -10px; /* Mueve el h1 hacia la derecha 50 píxeles desde su posición original */
-    white-space: nowrap; /* Evita que el texto haga saltos de línea automáticamente */
-
-}
-p.line{
-    top: -80px; 
-    left: 170px;
-}
 .contenedor {
-    position: relative; /* Establece la posición relativa */
-    transform: translateX(550px);
-    top: -120px; 
-    margin-top: 150px; /* Ajusta el margen superior del contenedor */
-    max-width: 50%;
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    border: 2px solid black; /* Borde del contenedor */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el padding en el ancho del contenedor */
 }
 
-.contenedor p {
-    font-size: 16px;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-top: 30px; /* Ajusta el margen superior de cada párrafo */
+.content {
+    text-align: center;
+    color: white;
 }
 
-/*BOTONES*/
-.boton {
-    background-color: #f0f0f0; /* Color de fondo */
-    color: #333; /* Color del texto */
-    border: 1px solid #ccc; /* Borde del botón */
-    padding: 10px 20px; /* Espacio interno */
-    font-size: 16px; /* Tamaño de fuente */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    border-radius: 4px; /* Bordes redondeados */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    display: inline-block; /* Permite aplicar padding y border */
-    position: relative;
-    top: -150px; 
-    left: 850px; 
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
-.boton:hover {
-    background-color: #e0e0e0; /* Color de fondo al pasar sobre el botón */
-    
+.content h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
+.content .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
 
+.content .button:hover {
+    background-color: #0056b3;
+}
+
+.banner {
+    text-align: center; /* Centra horizontalmente la imagen */
+}
+
+.banner img {
+    max-width: 100%; /* Hace que la imagen sea responsiva */
+    height: auto;
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin-top: 20px; /* Espacio entre el texto y la imagen */
+}
