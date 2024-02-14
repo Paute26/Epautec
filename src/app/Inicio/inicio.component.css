@@ -6,6 +6,7 @@ body {
 .app-component {
     position: relative; /* Establece la posición relativa para el contenedor */
     padding-top: 15px;
+    overflow: auto;
 }
 
 .imagen {  

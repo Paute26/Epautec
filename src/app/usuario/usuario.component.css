@@ -1,0 +1,27 @@
+.usuario-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .usuario-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .usuario-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .usuario-info div {
+    margin-bottom: 10px;
+  }
+  
+  .usuario-info strong {
+    font-weight: bold;
+  }
+  
