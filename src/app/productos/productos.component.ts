@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductoService } from '../Servicios/productos.service'; // Importa el servicio para obtener los productos
+import { ProductoService } from '../Servicios/productos.service';
+import { CarritoService } from '../Servicios/carrito.service'; // Importa el servicio del carrito
 
 @Component({
   selector: 'app-productos',
@@ -7,23 +8,29 @@ import { ProductoService } from '../Servicios/productos.service'; // Importa el 
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
-  productos?: any[]; // Arreglo para almacenar los productos
+  productos?: any[];
 
-  constructor(private productoService: ProductoService) { }
+  constructor(private productoService: ProductoService, private carritoService: CarritoService) { }
 
   ngOnInit(): void {
-    this.obtenerProductos(); // Llama a la función para obtener los productos al inicializar el componente
+    this.obtenerProductos();
   }
 
-  // Función para obtener los productos desde el servicio
   obtenerProductos() {
     this.productoService.obtenerProductos().subscribe(
       (data: any[]) => {
-        this.productos = data; // Asigna los productos obtenidos del servicio al arreglo de productos
+        this.productos = data;
       },
       error => {
         console.error('Error al obtener los productos: ', error);
       }
     );
+  }
+
+  // Función para agregar un producto al carrito
+  agregarAlCarrito(producto: any) {
+    this.carritoService.agregarProductoAlCarrito(producto);
+    console.log("Agregado Con Exito");
+    // Puedes agregar un mensaje de confirmación o redireccionar al usuario al carrito aquí si lo deseas
   }
 }

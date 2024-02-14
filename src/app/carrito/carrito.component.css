@@ -1,39 +1,42 @@
-/* Estilos para la página de productos */
+/* Estilos para la página del carrito de compras */
 h2 {
-    color: white;
+    color: black;
     text-align: center;
     padding-top: 2%; 
-}
-
-ul {
+  }
+  
+  ul {
     list-style-type: none;
     padding: 0 2%;
-
-}
-
-li {
+  }
+  
+  li {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-}
-
-p {
+  }
+  
+  p {
     margin: 5px 0;
-}
+  }
+  
+  .contenedor {
+    background-color: #f5f5f5;
+    color: black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
 
-.line {
-    width: 100%;
-    border-bottom: 1px solid white; /* Grosor, estilo y color de la línea */
-    margin: 20px 0; /* Margen superior e inferior para separar los elementos */
-}
-.contenedor{
-    background-color: black;
-    color: white;
-}
+  .eliminar-btn {
+    float: right;
+    margin-top: auto;
+  }
+  /* Estilo para el botón de eliminar en el carrito */
 button {
-    background-color:aqua; /* Color de fondo */
-    color: #424242; /* Color del texto */
+    background-color: #dc3545; /* Color de fondo */
+    color: white; /* Color del texto */
     border: none; /* Quita el borde */
     padding: 5px 10px; /* Ajusta el espaciado interno */
     border-radius: 4px; /* Redondea las esquinas */
@@ -43,6 +46,7 @@ button {
   
   /* Estilo para el botón de eliminar al pasar el cursor */
   button:hover {
-    background-color: green; /* Color de fondo al pasar el cursor */
-    color: white;
+    background-color: #c82333; /* Color de fondo al pasar el cursor */
   }
+  
+  
