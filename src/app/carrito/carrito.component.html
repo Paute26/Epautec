@@ -1,4 +1,17 @@
-<div class="contenedor">
+<div class="contenedor-usuario">
+    <h2>Información del Usuario</h2>
+    <div *ngIf="!usuario">
+      <p>No has iniciado sesión</p>
+      <button (click)="iniciarSesion()">Iniciar sesión</button>
+    </div>
+    <div *ngIf="usuario">
+      <div><strong>Nombre:</strong> {{ usuario.nombre }}</div>
+      <div><strong>Correo:</strong> {{ usuario.correo }}</div>
+      <!-- Agrega más campos según la información que desees mostrar -->
+    </div>
+  </div>
+  
+  <div class="contenedor-productos">
     <h2>Carrito de Compras</h2>
     <ul *ngIf="productosEnCarrito.length > 0">
       <li *ngFor="let producto of productosEnCarrito">
@@ -11,5 +24,6 @@
     <div *ngIf="productosEnCarrito.length === 0">
       <p>No hay productos en el carrito.</p>
     </div>
+    <button *ngIf="usuario" (click)="realizarCompra()">Comprar</button> <!-- Botón de Comprar -->
   </div>
   
