@@ -30,6 +30,7 @@ p {
 .contenedor{
     background-color: black;
     color: white;
+    flex: 2; /* El contenedor ocupará la mitad izquierda */
 }
 button {
     background-color:aqua; /* Color de fondo */
@@ -46,3 +47,81 @@ button {
     background-color: green; /* Color de fondo al pasar el cursor */
     color: white;
   }
+  .historial {
+    top: 0; /* Alinea el elemento en la parte superior */
+    right: 5%; /* Ajusta el margen derecho */
+    background-color: #ccc;
+    border: 1px solid black; /* Asegúrate de especificar el estilo del borde */
+    padding: 10px; /* Añade un poco de espacio interno */
+    flex: 1; /* El historial ocupará la mitad derecha */
+    margin: 1% 2%;
+}
+
+.global {
+    display: flex; /* Utiliza el modelo de caja flexible */
+}
+.mi-boton {
+    background-color: aqua;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Cambiamos a bloque para que el margen automático funcione */
+    font-size: 16px;
+    margin: 0 auto; /* Margen automático horizontal */
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  /*SEARCH STYLE*/
+  /* Estilos para el cuadro de búsqueda */
+.busqueda {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .busqueda input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .busqueda button {
+    padding: 10px 20px;
+    background-color: aqua;
+    border: none;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .busqueda button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos para el resultado de la búsqueda */
+  .resultado-busqueda {
+    margin-top: 20px;
+    color: white;
+  }
+  
+  .resultado-busqueda ul {
+    list-style-type: none;
+    padding: 0;
+    color: #424242;
+  }
+  
+  .resultado-busqueda ul li {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  
+  

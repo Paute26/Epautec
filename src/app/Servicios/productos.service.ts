@@ -18,8 +18,8 @@ export class ProductoService {
   }
 
   // Función para obtener un producto por su ID
-  obtenerProductoPorId(id: number): Observable<Producto> {
-    return this.http.get<Producto>(`${this.baseUrl}?id=${id}`);
+  obtenerProductoPorNombre(nombre: string): Observable<Producto> {
+    return this.http.get<Producto>(`${this.baseUrl}?nombre=${nombre}`);
   }
 
   // Función para crear un nuevo producto

@@ -1,4 +1,24 @@
-<div *ngIf="productos && productos.length" class="contenedor">
+<div class="busqueda">
+  <input type="text" placeholder="Buscar producto..." [(ngModel)]="nombreProducto">
+  <button (click)="buscarProductoPorNombre()">Buscar</button>
+</div>
+<div class="resultado-busqueda">
+  <ng-container *ngIf="productosEnBusqueda.length > 0; else sinCoincidencias">
+    <ul>
+      <li *ngFor="let producto of productosEnBusqueda">
+        {{ producto.nombre }} <br>
+        Precio:$ {{ producto.precio }}
+        <!-- Agrega más detalles del producto según sea necesario -->
+        <button (click)="agregarAlCarrito(producto)">Añadir al carrito</button>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #sinCoincidencias>
+    Sin coincidencias
+  </ng-template>
+</div>
+<div class="global">
+  <div *ngIf="productos && productos.length" class="contenedor">
     <h2>Listado de Productos</h2>
     <ul>
       <li *ngFor="let producto of productos">
@@ -14,4 +34,14 @@
   <div *ngIf="!productos || productos.length === 0">
     <p>No hay productos disponibles.</p>
   </div>
-  
+  <div class="historial">
+    <button class="mi-boton" routerLink="/Carrito">Continuar</button>
+    <h3>Historial-Compras</h3>
+    <ul>
+      <li *ngFor="let producto of carritoService.productosEnCarrito">
+        {{ producto.nombre }} - Precio: {{ producto.precio }}
+      </li>
+    </ul>
+  </div>
+
+</div>

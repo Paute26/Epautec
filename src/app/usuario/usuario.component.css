@@ -54,7 +54,9 @@
 
 /* Estilos para el contenedor de las facturas */
 .facturas-container {
-  margin-top: 20px;
+  margin-top: 25px;
+  margin: 2% 5%;
+  border-top: 2px solid #424242; /* Agrega una línea superior */
 }
 
 .facturas-container h3 {

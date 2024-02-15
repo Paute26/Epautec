@@ -16,13 +16,13 @@
             <li *ngFor="let item of productosEnFactura">
                 <span>{{ item.producto.nombre }}</span>
                 <span>Cantidad: {{ item.cantidad }}</span>
-                <span *ngIf="item.producto.precio !== undefined">Precio Unitario: {{ item.producto.precio }}</span>
-                <span *ngIf="item.producto.precio !== undefined">Total: {{ calcularTotalProducto(item) }}</span>
+                <span *ngIf="item.producto.precio !== undefined">Precio Unitario: ${{ item.producto.precio }}</span>
+                <span *ngIf="item.producto.precio !== undefined">Total: ${{ calcularTotalProducto(item) }}</span>
             </li>
         </ul>
     </div>
     <div class="total">
-        <h3>Total de la Factura: {{ calcularTotalFactura() }}</h3>
+        <h3>Total de la Factura: ${{ calcularTotalFactura() }}</h3>
     </div>
     <button (click)="confirmarCompra()">Confirmar Compra</button>
 </div>
