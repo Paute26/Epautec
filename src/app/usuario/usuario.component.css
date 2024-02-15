@@ -49,5 +49,40 @@
   margin-top: 1%;
   padding-top: 1%;
   text-align: center; /* Centra el contenido horizontalmente */
-  border-top: 2px solid #424242; /* Agrega una línea inferior */
+  border-top: 2px solid #424242; /* Agrega una línea superior */
 }
+
+/* Estilos para el contenedor de las facturas */
+.facturas-container {
+  margin-top: 20px;
+}
+
+.facturas-container h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.facturas-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.facturas-container li {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.facturas-container li:last-child {
+  border-bottom: none; /* Elimina el borde inferior del último elemento */
+}
+
+.facturas-container li div {
+  margin-bottom: 5px;
+}
+
+.facturas-container li div strong {
+  margin-right: 5px;
+  font-weight: bold;
+}
+

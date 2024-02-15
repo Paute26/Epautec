@@ -9,6 +9,24 @@
     <div><strong>Correo:</strong> {{ usuario.correo }}</div>
     <div><strong>Código:</strong> {{ usuario.codigo }}</div>
     <!-- Agrega aquí más campos según la información que desees mostrar -->
+
+    <!-- Mostrar facturas del usuario -->
+    <div class="facturas-container" *ngIf="facturas.length > 0">
+      <h3>Facturas:</h3>
+      <ul>
+        <li *ngFor="let factura of facturas">
+          <!-- Muestra los detalles de la factura aquí -->
+          <div><strong>Número:</strong> {{ factura.id }}</div>
+          <div><strong>Fecha:</strong> {{ factura.fecha }}</div>
+          <div><strong>Total:</strong> {{ factura.total }}</div>
+          
+          <!-- Agrega aquí más detalles de la factura si es necesario -->
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="facturas.length === 0">
+      <p>No hay facturas disponibles para mostrar.</p>
+    </div>
   </div>
   
   <!-- Nuevo div para centrar el botón del carrito -->

@@ -8,6 +8,12 @@
     background-color: #f9f9f9;
     margin-top: 2%;
 }
+.fecha-actual {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
 
 .usuario-info, .productos-info, .total {
     margin-bottom: 20px;
