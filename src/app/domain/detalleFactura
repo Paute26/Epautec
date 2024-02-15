@@ -1,0 +1,27 @@
+import { Producto } from './producto'; // Importa la clase Producto si está en un archivo separado
+
+export class DetalleFactura {
+  id?: number;
+  producto?: Producto;
+  cantidad?: number;
+  precioUnitario?: number;
+  encabezadoFactura?: any; // Puedes ajustar el tipo según la implementación de EncabezadoFactura
+
+  constructor(
+    id?: number,
+    producto?: Producto,
+    cantidad?: number,
+    precioUnitario?: number,
+    encabezadoFactura?: any
+  ) {
+    this.id = id;
+    this.producto = producto;
+    this.cantidad = cantidad;
+    this.precioUnitario = precioUnitario;
+    this.encabezadoFactura = encabezadoFactura;
+  }
+
+  toString(): string {
+    return `DetalleFactura [id=${this.id}, producto=${this.producto}, cantidad=${this.cantidad}, precioUnitario=${this.precioUnitario}, encabezadoFactura=${this.encabezadoFactura}]`;
+  }
+}

@@ -29,16 +29,42 @@ body {
   
   /* Botones */
   button {
-    background-color: #dc3545; /* Color de fondo */
+    background-color: #3eccff; /* Color de fondo */
     color: white; /* Color del texto */
     border: none; /* Quita el borde */
     padding: 5px 10px; /* Ajusta el espaciado interno */
     border-radius: 4px; /* Redondea las esquinas */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
     transition: background-color 0.3s ease; /* Transición suave */
+    text-align: center;
+    margin: 0% 1%;
+  }
+
+  .botonDelete {
+    float: right;
+    background-color: #dc3545; /* Color de fondo */
   }
   
   button:hover {
-    background-color: #c82333; /* Color de fondo al pasar el cursor */
+    background-color: #05b5f5; /* Color de fondo al pasar el cursor */
   }
-  
+
+/*Contenedor de TOTAL*/  
+.total-container {
+  max-width: 400px; /* Ancho máximo del contenedor */
+  margin: auto; /* Centrar horizontalmente */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde delgadp */
+  border-radius: 5px; /* Esquinas redondeadas */
+  background-color: #f9f9f9; /* Color de fondo */
+}
+
+.total-container h3 {
+  font-size: 20px; /* Tamaño de fuente */
+  margin: 0; /* Elimina el margen superior e inferior */
+  text-align: center; /* Alineación centrada */
+}
+
+.check{
+  text-align: center;
+}

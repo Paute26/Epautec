@@ -1,0 +1,55 @@
+.factura-container {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 2%;
+}
+
+.usuario-info, .productos-info, .total {
+    margin-bottom: 20px;
+}
+
+.usuario-info h3, .productos-info h3, .total h3 {
+    margin-top: 0;
+}
+
+.productos-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.productos-info li {
+    margin-bottom: 10px;
+}
+
+.productos-info li span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.total {
+    text-align: right;
+}
+
+.total h3 {
+    color:#3eccff;
+}
+
+
+button {
+    background-color:#3eccff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color:#00bbff;
+}

@@ -1,6 +1,6 @@
 <div class="contenedor-usuario">
     <h2>Información del Usuario</h2>
-    <div *ngIf="!usuario">
+    <div *ngIf="!usuario" class="check">
         <p>No has iniciado sesión.</p>
         <p>Iniciado sesión, para realizar una compra :) </p>
         <button (click)="iniciarSesion()">Iniciar sesión</button>
@@ -14,15 +14,20 @@
 <div class="contenedor-productos">
     <h2>Carrito de Compras</h2>
     <ul *ngIf="productosEnCarrito.length > 0">
-        <li *ngFor="let producto of productosEnCarrito">
-            <h3>{{ producto.nombre }}</h3>
-            <p>Precio: {{ producto.precio }}</p>
-            <!-- Agrega más detalles del producto si lo deseas -->
-            <button (click)="eliminarProducto(producto)">Eliminar</button> <!-- Botón para eliminar el producto -->
+        <li *ngFor="let productoAgrupado of agruparProductos()">
+            <h3>{{ productoAgrupado.producto.nombre }}</h3>
+            <p>Precio: {{ productoAgrupado.producto.precio }}</p>
+            <p>Cantidad: {{ productoAgrupado.cantidad }}</p>
+            <button class="botonDelete" (click)="eliminarProducto(productoAgrupado.producto)">Eliminar</button>
         </li>
     </ul>
-    <div *ngIf="productosEnCarrito.length === 0">
+    <div *ngIf="productosEnCarrito.length === 0" class="check">
         <p>No hay productos en el carrito.</p>
     </div>
-    <button *ngIf="usuario" (click)="realizarCompra()">Comprar</button> <!-- Botón de Comprar -->
 </div>
+
+<div class="total-container">
+    <h3>Total de la compra: </h3>
+    <h2>${{ calcularTotal() }}</h2>
+    <button *ngIf="usuario" (click)="realizarCompra()" >Comprar</button> 
+  </div>

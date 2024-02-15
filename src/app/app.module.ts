@@ -12,6 +12,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ProductosComponent } from './productos/productos.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { FacturaComponent } from './factura/factura.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     ContactoComponent,
     UsuarioComponent,
     ProductosComponent,
-    CarritoComponent
+    CarritoComponent,
+    FacturaComponent
   ],
   imports: [
     BrowserModule,

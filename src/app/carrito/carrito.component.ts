@@ -23,6 +23,7 @@ export class CarritoComponent implements OnInit {
   ngOnInit(): void {
     this.verificarAutenticacion(); // Verifica la autenticación al iniciar el componente
     this.obtenerProductosEnCarrito();
+    this.verificarProductosRepetidos();
   }
 
   obtenerProductosEnCarrito() {
@@ -50,14 +51,75 @@ export class CarritoComponent implements OnInit {
       }
     );
   }
-  
-  
+
+  calcularTotal(): number {
+    let total = 0;
+    for (const producto of this.productosEnCarrito) {
+      if (producto.stock !== undefined) { // Verifica si stock está definido
+        total += parseFloat(producto.precio || '0');
+      }
+    }
+    return total;
+  }
+  getStockMaximo(producto: Producto): number {
+    console.log(producto.stock)
+    return producto.stock || 0; // Si el stock es undefined, se asigna 0
+  }  
 
   iniciarSesion() {
     this.router.navigate(['Acceso']); 
   }
 
   realizarCompra() {
-    // Aquí puedes agregar la lógica para realizar la compra
+   if (this.calcularTotal() === 0) {
+     alert('No hay productos en tu carrito de compras');
+     console.log('No hay productos en el carrito');
+   } else {
+    this.router.navigate(['Factura']); 
+    console.log('CheckOut');
+   }
   }
+
+  verificarProductosRepetidos(): void {
+    const contadorProductos: {[key: string]: number} = {};
+  
+    // Contar la cantidad de cada producto en el carrito
+    for (const producto of this.productosEnCarrito) {
+      if (producto.id) { // Asumiendo que cada producto tiene un identificador único (id)
+        if (contadorProductos[producto.id]) {
+          contadorProductos[producto.id]++;
+        } else {
+          contadorProductos[producto.id] = 1;
+        }
+      }
+    }
+  
+    // Imprimir la cantidad de productos repetidos
+    for (const idProducto in contadorProductos) {
+      if (contadorProductos.hasOwnProperty(idProducto)) {
+        const cantidad = contadorProductos[idProducto];
+        if (cantidad > 1) {
+          console.log(`El producto con ID ${idProducto} se repite ${cantidad} veces en el carrito.`);
+        }
+      }
+    }
+  }
+  agruparProductos(): { producto: Producto, cantidad: number }[] {
+    const productosAgrupados: { producto: Producto, cantidad: number }[] = [];
+  
+    this.productosEnCarrito.forEach(producto => {
+      const index = productosAgrupados.findIndex(item => item.producto.id === producto.id);
+      if (index !== -1) {
+        productosAgrupados[index].cantidad++;
+      } else {
+        productosAgrupados.push({ producto, cantidad: 1 });
+      }
+    });
+  
+    return productosAgrupados;
+  }
+  
+
+
+  
 }
