@@ -1,10 +1,18 @@
 <div class="usuario-container">
-  <h2>Perfil de Usuario</h2>
+  <div class="usuario-header">
+    <h2>Perfil de Usuario</h2>
+    <button class="boton logout-btn" (click)="logout()">LogOut</button>
+  </div>
+  
   <div class="usuario-info" *ngIf="usuario">
     <div><strong>Nombre:</strong> {{ usuario.nombre }}</div>
     <div><strong>Correo:</strong> {{ usuario.correo }}</div>
     <div><strong>Código:</strong> {{ usuario.codigo }}</div>
     <!-- Agrega aquí más campos según la información que desees mostrar -->
   </div>
-  <button (click)="logout()">LogOut</button>
+  
+  <!-- Nuevo div para centrar el botón del carrito -->
+  <div class="carrito-btn-container">
+    <button class="boton" (click)="irACarrito()">Carrito</button> <!-- Botón para ir al carrito -->
+  </div>
 </div>

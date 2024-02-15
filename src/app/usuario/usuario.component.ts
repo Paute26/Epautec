@@ -25,4 +25,8 @@ export class UsuarioComponent implements OnInit {
     this.usuariosService.setUsuario(new Usuario());
     this.router.navigate(['Acceso']); 
   }
+
+  irACarrito(): void {
+    this.router.navigate(['Carrito']); 
+  }
 }

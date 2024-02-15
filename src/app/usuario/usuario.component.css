@@ -1,27 +1,53 @@
 .usuario-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .usuario-container h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .usuario-info {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .usuario-info div {
-    margin-bottom: 10px;
-  }
-  
-  .usuario-info strong {
-    font-weight: bold;
-  }
-  
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.usuario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.usuario-header h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.boton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #0056b3;
+}
+
+.logout-btn {
+  font-size: inherit;
+  background-color: #dc3545;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Estilos para el contenedor del botón del carrito */
+.carrito-btn-container {
+  margin-top: 1%;
+  padding-top: 1%;
+  text-align: center; /* Centra el contenido horizontalmente */
+  border-top: 2px solid #424242; /* Agrega una línea inferior */
+}
